@@ -6,7 +6,11 @@
   line-height: 0;
 }
 
-body, select, a, input {
+body {
+  background-color: rgb(240,240,240)
+}
+
+.health-container, select, a, input {
   background-color: rgb(250,250,250);
 }
 
@@ -81,7 +85,7 @@ p {
   width: 90%;
   max-width: 660px;
   margin: 20px auto;
-  border: 2px outset rgb(192, 192, 192);
+  border: 2px solid rgb(192, 192, 192);
   font-family: 'Open Sans', sans-serif
 }
 
@@ -119,6 +123,11 @@ label {
 input {
   padding-left: 20px;
   border: none;
+}
+
+input[type="text"]:focus {
+  border-bottom: 3px solid #ee6e73;
+  outline: none;
 }
 
 select {
@@ -190,7 +199,14 @@ a {
 
 .list, .nutrition-facts {
     padding: 10px;
-    float: left;
+    position: fixed;
+    bottom: 0;
+    left: 10%;
+    right: 10%;
+    max-height: 50%;
+    overflow: scroll;
+    background-color: rgb(250,250,250);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
 @media only screen and (max-width: 500px) {

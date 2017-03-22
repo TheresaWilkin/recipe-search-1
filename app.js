@@ -122,6 +122,7 @@ $("form").submit(e => {
 //toggle ingredient view w/recipe && nutrional info button
 $("#results").on("click", ".result", e => {
     e.stopPropagation();
+    $(".list").css("display", "none");
     $(e.currentTarget).children(".list").slideToggle();
 })
 //recipe button
